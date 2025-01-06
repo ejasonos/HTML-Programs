@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    @media (max-width: 1499px) {
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  font-family: 'Calibri';
+}
+
+.hero-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+.col1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  .col1-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 8px;
+    gap: 5px;
+    .finish-commit-btn, .start-commit-btn {
+      display: flex;
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 0.5px 0.5px 2px 2px rgb(36, 36, 131),
+      inset -1px -1px 2px 2px rgb(22, 22, 85);
+      color: whitesmoke;
+    }
+    .finish-commit-btn:hover, .start-commit-btn:hover {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 1px 1px 7px 5px rgb(60, 60, 240),
+      inset -1px -1px 7px 5px rgb(75, 75, 121);
+      color: whitesmoke;
+      font-weight: bold;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  .col1-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    gap: 3px;
+    .curday {
+      width: fit-content;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 9px;
+      background-color: darkblue;
+      box-shadow: inset 0.1px 0.1px 29px 2px rgb(36, 36, 131),
+      inset -0.1px -0.1px 29px 2px rgb(22, 22, 85);
+      color: silver;
+      .curday-lft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        border-right: 2px solid gold;
+        .dofs {
+          display: flex;
+          font-size: 70px;
+          font-weight: bold;
+          color: gold;
+          .acdd {
+            margin: 0 7px;
+            font-weight: inherit;
+            font-size: inherit;
+            color: inherit;
+          }
+          input {
+            background-color: transparent;
+            width: 50px;
+            border: none;
+            outline: none;
+            font-size: inherit;
+            color: inherit;
+            font-weight: inherit;
+          }
+        }
+        .cds {
+          display: none;
+          font-size: 90px;
+          color: silver;
+        }
+        .cds-display {
+          display: flex;
+          font-size: 90px;
+          color: silver;
+        }
+      }
+      .curday-rgt {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        padding: 10px;
+        .rw {display: flex}
+        input {
+          background-color: transparent;
+          border: none;
+          color: white;
+          outline: none;
+          border-bottom: 2px solid grey;
+          width: 80px;
+        }
+        .m-red {color: red;}
+        .p-green {color: greenyellow;}
+        .cspnt-value {color: red}
+        .cearn-value {color: greenyellow}
+      }
+    }
+    .curday:hover {
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 1px 1px 5px 2px rgb(60, 60, 240),
+      inset -1px -1px 7px 2px rgb(75, 75, 121);
+      color: whitesmoke;
+      transition: all 0.5s ease-in-out;
+    }
+    .ods {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 5px;
+      .od {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: darkblue;
+        border-radius: 9px;
+        border: 3px solid rgb(3, 3, 136);
+        box-shadow: inset 0.1px 0.1px 20px 2px rgb(60, 60, 240),
+        inset -0.1px -0.1px 20px 2px rgb(47, 47, 126);
+        color: whitesmoke;
+        animation-name: roll;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        .dstk {
+          display: none;
+          position: relative;
+          top: -40px;
+          left: -115px;
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background-color: greenyellow;
+        }
+        .dstk-on {
+          position: relative;
+          top: -40px;
+          left: -115px;
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background-color: greenyellow;
+        }
+        .dstk-off {
+          position: relative;
+          top: -40px;
+          left: -115px;
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background-color: red;
+        }
+        .od-cont {
+          height: 120px;
+          width: 140px;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+       .dy {color: gray;font-weight: bold;font-size: 40px;}
+          .p-green {color: greenyellow;}
+          .m-red {color: red;}
+          .rw {display: flex}
+        }
+      }
+    }
+  }
+}
+.col2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  .col2-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 8px;
+    gap: 5px;
+    .show-text-btn, .no-text-btn {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 0.5px 0.5px 2px 2px rgb(36, 36, 131),
+      inset -1px -1px 2px 2px rgb(22, 22, 85);
+      color: whitesmoke;
+    }
+    .show-text-btn:hover, .no-text-btn:hover {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 1px 1px 7px 5px rgb(60, 60, 240),
+      inset -1px -1px 7px 5px rgb(75, 75, 121);
+      color: whitesmoke;
+      font-weight: bold;
+      transition: all 0.5s ease-in-out;
+    }
+    .button-active {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 1px 1px 7px 5px rgb(60, 60, 240),
+      inset -1px -1px 7px 5px rgb(75, 75, 121);
+      color: whitesmoke;
+      font-weight: bold;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  .col2-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+    padding: 20px;
+    gap: 10px;
+    .enc-text-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      .enc-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        font-family: courier;
+        color: brown;
+      }
+      .enc-ind {
+        width: 100%;
+        font-size: 50px;
+        font-weight: bold;
+        font-family: 'Calibri';
+        color: gold;
+        text-align: center;
+      }
+    }
+    .enc-img-wrap {
+      height: 100%;
+      width: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      .enc-img {
+        height: 50%;
+        width: 100%;
+      }
+    }
+  }
+}
+.col3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  .col3-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 8px;
+    gap: 5px;
+    .mode-btn, .remove-ads-btn {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 0.5px 0.5px 2px 2px rgb(36, 36, 131),
+      inset -1px -1px 2px 2px rgb(22, 22, 85);
+      color: whitesmoke;
+    }
+    .mode-btn:hover, .remove-ads-btn:hover {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 1px 1px 7px 5px rgb(60, 60, 240),
+      inset -1px -1px 7px 5px rgb(75, 75, 121);
+      color: whitesmoke;
+      font-weight: bold;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  .col3-cont {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .exch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 25%;
+      width: 100%;
+      border: 1px solid gray;
+      border-radius: 9px;
+      gap: 9px;
+      font-size: 30px;
+      color: gray;
+      font-weight: bold;
+      .iusd-wrap {
+        input {
+          width: 50px;
+          text-align: center;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          font-size: inherit;
+          color: inherit;
+          font-weight: inherit;
+        }
+      }
+      .iexch-symbol-wrap {
+        p {
+          font-size: inherit;
+          color: inherit;
+          font-weight: inherit;
+        }
+      }
+      .isc-wrap {
+        display: flex;
+      }
+    }
+    .exch:hover {
+      background-color: gray;
+      color: inherit;
+    }
+    .med {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50%
+      width: inherit;
+      .sc-imgA {
+        position: relative;
+        left: 140px;
+        /*animation-name: zoomInOutA;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;*/
+      }
+      .sc-imgB {
+        position: relative;
+        left: -140px;
+        /*animation-name: zoomInOutB;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;*/
+      }
+    }
+    .fex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 25%;
+      width: inherit;
+    }
+  }
+}
+
+} /* end of max-width: 1499px */
+
+/* ********** Initial Style ********** */
+@media (min-width: 1500px) {
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  font-family: 'Calibri';
+}
+
+.hero-page {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+.col1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  .col1-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 9px;
+    gap: 20px;
+    .finish-commit-btn, .start-commit-btn {
+      display: flex;
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 0.5px 0.5px 2px 2px rgb(36, 36, 131),
+      inset -1px -1px 2px 2px rgb(22, 22, 85);
+      color: whitesmoke;
+    }
+    .finish-commit-btn:hover, .start-commit-btn:hover {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 1px 1px 7px 5px rgb(60, 60, 240),
+      inset -1px -1px 7px 5px rgb(75, 75, 121);
+      color: whitesmoke;
+      font-weight: bold;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  .col1-cont {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 9px;
+    gap: 3px;
+    .curday {
+      width: 100%;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 9px;
+      background-color: darkblue;
+      box-shadow: inset 0.1px 0.1px 29px 2px rgb(36, 36, 131),
+      inset -0.1px -0.1px 29px 2px rgb(22, 22, 85);
+      color: silver;
+      .curday-lft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border-right: 2px solid gold;
+        .dofs {
+          display: flex;
+          font-size: 70px;
+          font-weight: bold;
+          color: gold;
+          .acdd {
+            margin: 0 7px;
+            font-weight: inherit;
+            font-size: inherit;
+            color: inherit;
+          }
+        }
+        .cds {
+          display: none;
+          font-size: 90px;
+          color: silver;
+        }
+        .cds-display {
+          display: flex;
+          font-size: 90px;
+          color: silver;
+        }
+      }
+      .curday-rgt {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        padding: 10px;
+        .rw {display: flex}
+        input {
+          background-color: transparent;
+          border: none;
+          color: white;
+          outline: none;
+          border-bottom: 2px solid grey;
+          width: 80px;
+        }
+        .m-red {color: red;}
+        .p-green {color: greenyellow;}
+        .cspnt-value {color: red}
+        .cearn-value {color: greenyellow}
+      }
+    }
+    .curday:hover {
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 1px 1px 5px 2px rgb(60, 60, 240),
+      inset -1px -1px 7px 2px rgb(75, 75, 121);
+      color: whitesmoke;
+      transition: all 0.5s ease-in-out;
+    }
+    .ods {
+      display: grid;
+      grid-template-columns: 33.3% 33.3% 33.3%;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      .od {
+        place-self: center;
+        width: 300px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: darkblue;
+        border-radius: 9px;
+        border: 3px solid rgb(3, 3, 136);
+        box-shadow: inset 0.1px 0.1px 20px 2px rgb(60, 60, 240),
+        inset -0.1px -0.1px 20px 2px rgb(47, 47, 126);
+        color: whitesmoke;
+        animation-name: roll;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        .dstk {
+          display: none;
+          position: relative;
+          top: -40px;
+          left: -115px;
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background-color: greenyellow;
+        }
+        .dstk-on {
+          position: relative;
+          top: -40px;
+          left: -115px;
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background-color: greenyellow;
+        }
+        .dstk-off {
+          position: relative;
+          top: -40px;
+          left: -115px;
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background-color: red;
+        }
+        .od-cont {
+          position: absolute;
+          width: fit-content;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+   .dy {color: gold;font-weight: bold;font-size: 40px;}
+          .p-green {color: greenyellow;}
+          .m-red {color: red;}
+          .rw {display: flex}
+        }
+      }
+    }
+  }
+}
+.col2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  .col2-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    width: fit-content;
+    gap: 20px;
+    .show-text-btn, .no-text-btn {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 0.5px 0.5px 2px 2px rgb(36, 36, 131),
+      inset -1px -1px 2px 2px rgb(22, 22, 85);
+      color: whitesmoke;
+    }
+    .show-text-btn:hover, .no-text-btn:hover {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 1px 1px 7px 5px rgb(60, 60, 240),
+      inset -1px -1px 7px 5px rgb(75, 75, 121);
+      color: whitesmoke;
+      font-weight: bold;
+      transition: all 0.5s ease-in-out;
+    }
+    .button-active {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 1px 1px 7px 5px rgb(60, 60, 240),
+      inset -1px -1px 7px 5px rgb(75, 75, 121);
+      color: whitesmoke;
+      font-weight: bold;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  .col2-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+    gap: 10px;
+    .enc-text-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      .enc-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        font-family: courier;
+        color: brown;
+      }
+      .enc-ind {
+        width: 100%;
+        font-size: 50px;
+        font-weight: bold;
+        font-family: 'Calibri';
+        color: gold;
+        padding-right: 30px;
+        text-align: right;
+      }
+    }
+    .enc-img-wrap {
+      height: 100%;
+      width: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      .enc-img {
+        height: 50%;
+        width: 100%;
+      }
+    }
+  }
+}
+.col3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  .col3-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    width: fit-content;
+    gap: 20px;
+    .mode-btn, .remove-ads-btn {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 0.5px 0.5px 2px 2px rgb(36, 36, 131),
+      inset -1px -1px 2px 2px rgb(22, 22, 85);
+      color: whitesmoke;
+    }
+    .mode-btn:hover, .remove-ads-btn:hover {
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 50px;
+      border: 3px solid rgb(6, 6, 255);
+      background-color: darkblue;
+      box-shadow: inset 1px 1px 7px 5px rgb(60, 60, 240),
+      inset -1px -1px 7px 5px rgb(75, 75, 121);
+      color: whitesmoke;
+      font-weight: bold;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  .col3-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .exch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 25%;
+      width: 100%;
+      border: 1px solid gray;
+      border-radius: 9px;
+      gap: 9px;
+      font-size: 30px;
+      color: gray;
+      font-weight: bold;
+      .iusd-wrap {
+        input {
+          width: 50px;
+          text-align: center;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          font-size: inherit;
+          color: inherit;
+          font-weight: inherit;
+        }
+      }
+      .iexch-symbol-wrap {
+        p {
+          font-size: inherit;
+          color: inherit;
+          font-weight: inherit;
+        }
+      }
+      .isc-wrap {
+        display: flex;
+      }
+    }
+    .exch:hover {
+      background-color: gray;
+      color: inherit;
+    }
+    .med {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50%
+      width: inherit;
+      .sc-imgA {
+        position: relative;
+        left: 140px;
+        /*animation-name: zoomInOutA;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;*/
+      }
+      .sc-imgB {
+        position: relative;
+        left: -140px;
+        /*animation-name: zoomInOutB;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;*/
+      }
+    }
+    .fex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 25%;
+      width: inherit;
+    }
+  }
+}
+
+}/* end of min-width 1500px
+
+@keyframes zoomInOutA {
+  0% {
+    transform: scale(1, 1) rotateZ(-19deg);
+  }
+  50% {
+    transform: scale(1.05, 1.05) rotateZ(-4deg);
+  }
+}
+@keyframes zoomInOutB {
+  0% {
+    transform: scale(1, 1) rotateZ(9deg);
+  }
+  50% {
+    transform: scale(1.05, 1.05) rotateZ(-9deg);
+  }
+}
+*/
+@keyframes roll {
+  0% {
+    padding: 10px 20px;
+    border: solid rgb(6, 6, 255);
+    box-shadow: inset 0.1px 0.1px 10px 2px rgb(36, 36, 131),
+    inset -0.1px -0.1px 10px 2px rgb(22, 22, 85);
+    transition: all 0.5s ease-in;
+  }
+  25% {
+    padding: 10px 20px;
+    border: solid rgb(6, 6, 255);
+    box-shadow: inset 0.1px 0.1px 10px 2px rgb(36, 36, 131),
+    inset -0.1px -0.1px 10px 2px rgb(22, 22, 85);
+    transition: all 0.5s ease-in;
+  }
+  50% {
+    border: 3px solid rgb(3, 3, 136);
+    box-shadow: inset 0.1px 0.1px 20px 2px rgb(60, 60, 240),
+    inset -0.1px -0.1px 20px 2px rgb(47, 47, 126);
+    transition: all 0.5s ease-out;
+  }
+  75% {
+    border: 3px solid rgb(3, 3, 136);
+    box-shadow: inset 0.1px 0.1px 20px 2px rgb(60, 60, 240),
+    inset -0.1px -0.1px 20px 2px rgb(47, 47, 126);
+    transition: all 0.5s ease-out;
+  }
+}
+
+.darkMode {
+  background-color: rgb(5,5,50);
+  color: white;
+}
+.lightMode {
+  background-color: white;
+  color: darkblue;
+}
+    </style>
+    <title>Consistency coin</title>
+</head>
+<body id="body">
+  <main class="hero-page">
+    <div class="col1">
+      <nav class="col1-nav">
+        <button class="start-commit-btn" id="sCommitBtn" id="sCommitBtn type="button">COMMIT</button>
+        <button class="finish-commit-btn" id="fCommitBtn" id="fCommit type="button">END COMMIT</button>
+      </nav>
+      <div class="col1-cont">
+        <div class="curday">
+          <div class="curday-lft">
+            <div class="dofs">Day <span class="acdd">1</span> of 7</div>
+            <div class="cds" id="cds">Time is ticking..</div>
+          </div>
+          <div class="curday-rgt">
+            <div class="sp">Cash spent:</div><div class="rw"><span class="m-red">-</span><input type="number" max-len="5" title="cspent" class="cspnt-value" /></div>
+            <div class="gn">Cash earned:</div><div class="rw"><span class="p-green">+</span><input type="number" title="cearn" class="cearn-value" /></div>
+          </div>
+        </div>
+        <div class="ods">
+          <div class="od">
+            <div class="dstk" id="dstk"></div>
+            <div class="od-cont">
+              <div class="dy">DAY <span class="rd">2</span></div>
+              <div>
+                <div class="sp">Cash spent:</div><div class="rw"><span class="m-red">-</span><span class="cspnt-value"></span></div>
+                <div class="gn">Cash earned:</div><div class="rw"><span class="p-green">+</span><span class="cearn-value"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="od">
+            <div class="dstk" id="dstk"></div>
+            <div class="od-cont">
+              <div class="dy">DAY <span class="rd">3</span></div>
+              <div>
+                <div class="sp">Cash spent:</div><div class="rw"><span class="m-red">-</span><span class="cspnt-value"></span></div>
+                <div class="gn">Cash earned:</div><div class="rw"><span class="p-green">+</span><span class="cearn-value"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="od">
+            <div class="dstk" id="dstk"></div>
+            <div class="od-cont">
+              <div class="dy">DAY <span class="rd">4</span></div>
+              <div>
+                <div class="sp">Cash spent:</div><div class="rw"><span class="m-red">-</span><span class="cspnt-value"></span></div>
+                <div class="gn">Cash earned:</div><div class="rw"><span class="p-green">+</span><span class="cearn-value"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="od">
+            <div class="dstk" id="dstk"></div>
+            <div class="od-cont">
+              <div class="dy">DAY <span class="rd">5</span></div>
+              <div>
+                <div class="sp">Cash spent:</div><div class="rw"><span class="m-red">-</span><span class="cspnt-value"></span></div>
+                <div class="gn">Cash earned:</div><div class="rw"><span class="p-green">+</span><span class="cearn-value"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="od">
+            <div class="dstk" id="dstk"></div>
+            <div class="od-cont">
+              <div class="dy">DAY <span class="rd">6</span></div>
+              <div>
+                <div class="sp">Cash spent:</div><div class="rw"><span class="m-red">-</span><span class="cspnt-value"></span></div>
+                <div class="gn">Cash earned:</div><div class="rw"><span class="p-green">+</span><span class="cearn-value"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="od">
+            <div class="dstk" id="dstk"></div>
+            <div class="od-cont">
+              <div class="dy">DAY <span class="rd">7</span></div>
+              <div>
+                <div class="sp">Cash spent:</div><div class="rw"><span class="m-red">-</span><span class="cspnt-value"></span></div>
+                <div class="gn">Cash earned:</div><div class="rw"><span class="p-green">+</span><span class="cearn-value"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col2">
+      <nav class="col2-nav">
+        <button class="show-text-btn" id="showText" type="button">TURN TEXT ON</button>
+        <button class="no-text-btn" id="noText" type="button">TURN TEXT OFF</button>
+      </nav>
+      <div class="col2-cont">
+        <div class="enc-text-wrap" id="encTextWrap">
+          <div class="enc-text" id="encText"></div>
+          <div class="enc-ind" id="encInd"></div>
+        </div>
+        <div class="enc-img-wrap" id="encImgWrap"><img class="enc-img" type="image/png" src="res/img/encImg.png" /></div>
+      </div>
+    </div>
+    <div class="col3">
+      <nav class="col3-nav">
+        <button class="mode-btn" type="button">LIGHT MODE</button>
+        <button class="remove-ads-btn" type="button">REMOVE ADS</button>
+      </nav>
+      <div class="col3-cont">
+        <div class="exch">
+          <div class="iusd-wrap"><input type="number" title="USD" class="usdEl" id="usdEl" /> USD</div>
+          <div class="iexch-symbol-wrap"><p><></p></div>
+          <div class="isc-wrap"><span type="number" class="scEl" id="scEl"></span><p> CC</p></div>
+        </div>
+        <div class="med">
+          <img class="sc-img sc-imgA" src="res/img/scoin.png" type="image/png" />
+          <img class="sc-img sc-imgB" src="res/img/scoin.png" type="image/png" />
+        </div>
+        <div class="fex">
+          <div>Fixed amount: <input type="number" title="Fixed account" class="fixedAmountEl" id="fixedAmountEl" /></div>
+          <div>Day Streak: <span class="ids" id="ids"></span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+  //////////////////// clock function ////////////////////
+const cds = document.querySelector("#cds");function hrZero(el){switch(el){case 0:return 12;break;case 13:return 1;break;case 14:return 2;break;case 15:return 3;break;case 16:return 4;break;case 17:return 5;break;case 18:return 6;break;case 19:return 7;break;case 20:return 8;break;case 21:return 9;break;case 22:return 10;break;case 23:return 11;break;case 24:return 12;break;default:return el;break;}}function addZero(el){switch(el){case 0:return `00`;break;case 1:return `01`;break;case 2:return `02`;break;case 3:return `03`;break;case 4:return `04`;break;case 5:return `05`;break;case 6:return `06`;break;case 7:return `07`;break;case 8:return `08`;break;case 9:return `09`;break;default:return el;break;}}setInterval(function(){let date=new Date();const [hr,mn,ss]=[date.getHours(),date.getMinutes(),date.getSeconds()];cds.textContent =`${hrZero(hr)}:${addZero(mn)}:${addZero(ss)}`;},1000);
+
+//////////////////// function for random quotes ////////////////////
+const encText = document.querySelector("#encText");const encInd = document.querySelector("#encInd");class enc{text;ind;}var suffer=new enc(),fight=new enc(),calm=new enc(),listen=new enc(),spirit=new enc(),smooth=new enc(),work=new enc(),message=new enc(),align=new enc(),wisdom=new enc(), promise=new enc();var encouragement=[suffer,fight,calm,listen,spirit,smooth,work,message,align,wisdom,promise];suffer.text="My career is founded in and with the blood of Christ, and not on schedule or any human capacity";suffer.ind="Carlos Ejakpevweoghene Onosemuode";fight.text="Keep calm, God's property is made for glory";fight.ind="Rhapsody";calm.text="I am worth the blood of Christ, I dwell in light and cannot be hurt by the devil";calm.ind="Rhapsody";listen.text="Listen, God is priority";listen.ind="Favour Ejakpevweoghene";spirit.text="I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me";spirit.ind="Galatians 2:20";smooth.text="Slow is smooth, and smooth is fast";smooth.ind="Jeff Bezos";work.text="Work very hard to become great";work.ind="Elon Musk";message.text="Glorify God in your body and spirit";message.ind="Favour Ejakpevweoghene";align.text="Make choices that align with God's principles";align.ind="Pastor POK";wisdom.text="Wisdom to overcome everyday's troubles";wisdom.ind="Carlos Favour Ejakpevweoghene";promise.text="Promises made, promises kept";promise.ind="Donald Trump";let rand=Math.trunc(Math.random()*encouragement.length);encText.textContent=encouragement[rand].text;encInd.textContent=encouragement[rand].ind;setInterval(function(){let rand=Math.trunc(Math.random()*encouragement.length);encText.textContent=encouragement[rand].text;encInd.textContent=encouragement[rand].ind;},60000);
+
+//////////////////// The commit code ////////////////////
+const sCommitBtn = document.querySelector("#sCommitBtn");
+const fCommitBtn = document.querySelector("#fCommitBtn");
+const curDayValue = document.querySelector(".acdd");
+const rd = document.querySelectorAll(".rd");
+const cspnt = document.querySelectorAll(".cspnt-value");
+const cearn = document.querySelectorAll(".cearn-value");
+const dstk = document.querySelectorAll(".dstk");
+
+// Note: For simulating a day using minutes as day and seconds as hours, we make use of the "nextDay" variable
+
+var tmpDay = Number(localStorage.getItem("commitDay"));
+var nextDay = Number(localStorage.getItem("nextDayCache"));
+
+sCommitBtn.onclick = () => {
+  let date = new Date();
+  localStorage.setItem("commitDay", Number(date.getDate()));
+  tmpDay = Number(localStorage.getItem("commitDay"));
+  localStorage.setItem("nextDayCache", tmpDay);
+  nextDay = Number(localStorage.getItem("nextDayCache"));
+  localStorage.setItem("unseenSD", "none");
+  alert("You must be active on this app by 11:59PM everyday (for the next seven days) to confirm your daily balances");
+};
+fCommitBtn.onclick = () => {
+  localStorage.clear();
+  fCommitBtn.className = "finish-commit-btn";
+  sCommitBtn.style.display = "flex";
+};
+
+setInterval(()=> {
+  tmpDay = Number(localStorage.getItem("commitDay"));
+  let date = new Date();
+  if (sCommitBtn.style.display === "none") {
+    cds.className = "cds-display";
+  } else if (sCommitBtn.style.display != "none") {
+    cds.className = "cds";
+  }
+  if (tmpDay > 0 && tmpDay !== null) {
+    sCommitBtn.style.display = localStorage.getItem("unseenSD");
+    localStorage.setItem("csCur", cspnt[0].value);
+    localStorage.setItem("ceCur", cearn[0].value);
+    if (date.getDate() === tmpDay) {
+      cspnt[1].style.color = "transparent";
+      cearn[1].style.color = "transparent";
+      cspnt[1].textContent = localStorage.getItem("csCur");
+      cearn[1].textContent = localStorage.getItem("ceCur");
+      if (date.getDate() === Number(tmpDay) && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        rd[0].textContent = 1;
+        cspnt[1].style.color = "inherit";
+        cearn[1].style.color = "inherit";
+        localStorage.setItem("dyOne", rd[0].textContent);
+        localStorage.setItem("csOne", cspnt[1].textContent);
+        localStorage.setItem("ceOne", cearn[1].textContent);
+        if (Number(cspnt[0].value) > Number(cearn[0].value)) {
+          dstk[0].className = "dstk-off";
+        } else if (Number(cspnt[0].value) <= Number(cearn[0].value)) {
+          dstk[0].className = "dstk-on";
+        }
+        curDayValue.textContent = 2;
+        nextDay = Number(tmpDay) + 1;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+1);
+      }
+    } else if (date.getDate() === Number(localStorage.getItem("commitDay"))+1) {
+      cspnt[2].style.color = "transparent";
+      cearn[2].style.color = "transparent";
+      cspnt[2].textContent = localStorage.getItem("csCur");
+      cearn[2].textContent = localStorage.getItem("ceCur");
+      if (date.getDate() === Number(localStorage.getItem("commitDay"))+1 && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        rd[1].textContent = 2;
+        cspnt[2].style.color = "inherit";
+        cearn[2].style.color = "inherit";
+        localStorage.setItem("dyTwo", rd[1].textContent);
+        localStorage.setItem("csTwo", cspnt[2].textContent);
+        localStorage.setItem("ceTwo", cearn[2].textContent);
+        if (Number(cspnt[0].value) > Number(cearn[0].value)) {
+          dstk[1].className = "dstk-off";
+        } else if (Number(cspnt[0].value) <= Number(cearn[0].value)) {
+          dstk[1].className = "dstk-on";
+        }
+        curDayValue.textContent = 3;
+        nextDay = Number(tmpDay) + 2;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+2);
+      }
+    } else if (date.getDate() === Number(localStorage.getItem("commitDay"))+2) {
+      cspnt[3].style.color = "transparent";
+      cearn[3].style.color = "transparent";
+      cspnt[3].textContent = localStorage.getItem("csCur");
+      cearn[3].textContent = localStorage.getItem("ceCur");
+      if (date.getDate() === Number(localStorage.getItem("commitDay"))+2 && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        rd[2].textContent = 3;
+        cspnt[3].style.color = "inherit";
+        cearn[3].style.color = "inherit";
+        localStorage.setItem("dyThree", rd[2].textContent);
+        localStorage.setItem("csThree", cspnt[3].textContent);
+        localStorage.setItem("ceThree", cearn[3].textContent);
+        if (Number(cspnt[0].value) > Number(cearn[0].value)) {
+          dstk[2].className = "dstk-off";
+        } else if (Number(cspnt[0].value) <= Number(cearn[0].value)) {
+          dstk[2].className = "dstk-on";
+        }
+        curDayValue.textContent = 4;
+        nextDay = Number(tmpDay) + 3;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+3);
+      }
+    } else if (date.getDate() === Number(localStorage.getItem("commitDay"))+3) {
+      cspnt[4].style.color = "transparent";
+      cearn[4].style.color = "transparent";
+      cspnt[4].textContent = localStorage.getItem("csCur");
+      cearn[4].textContent = localStorage.getItem("ceCur");
+      if (date.getDate() === Number(localStorage.getItem("commitDay"))+3 && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        rd[3].textContent = 4;
+        cspnt[4].style.color = "inherit";
+        cearn[4].style.color = "inherit";
+        localStorage.setItem("dyFour", rd[3].textContent);
+        localStorage.setItem("csFour", cspnt[4].textContent);
+        localStorage.setItem("ceFour", cearn[4].textContent);
+        if (Number(cspnt[0].value) > Number(cearn[0].value)) {
+          dstk[3].className = "dstk-off";
+        } else if (Number(cspnt[0].value) <= Number(cearn[0].value)) {
+          dstk[3].className = "dstk-on";
+        }
+        curDayValue.textContent = 5;
+        nextDay = Number(tmpDay) + 4;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+4);
+      }
+    } else if (date.getDate() === Number(localStorage.getItem("commitDay"))+4) {
+      cspnt[5].style.color = "transparent";
+      cearn[5].style.color = "transparent";
+      cspnt[5].textContent = localStorage.getItem("csCur");
+      cearn[5].textContent = localStorage.getItem("ceCur");
+      if (date.getDate() === Number(localStorage.getItem("commitDay"))+4 && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        rd[4].textContent = 5;
+        cspnt[5].style.color = "inherit";
+        cearn[5].style.color = "inherit";
+        localStorage.setItem("dyFive", rd[4].textContent);
+        localStorage.setItem("csFive", cspnt[5].textContent);
+        localStorage.setItem("ceFive", cearn[5].textContent);
+        if (Number(cspnt[0].value) > Number(cearn[0].value)) {
+          dstk[4].className = "dstk-off";
+        } else if (Number(cspnt[0].value) <= Number(cearn[0].value)) {
+          dstk[4].className = "dstk-on";
+        }
+        curDayValue.textContent = 6;
+        nextDay = Number(tmpDay) + 5;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+5);
+      }
+    } else if (date.getDate() === Number(localStorage.getItem("commitDay"))+5) {
+      cspnt[6].style.color = "transparent";
+      cearn[6].style.color = "transparent";
+      cspnt[6].textContent = localStorage.getItem("csCur");
+      cearn[6].textContent = localStorage.getItem("ceCur");
+      if (date.getDate() === Number(localStorage.getItem("commitDay"))+5 && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        rd[5].textContent = 6;
+        cspnt[6].style.color = "inherit";
+        cearn[6].style.color = "inherit";
+        cspnt[6].textContent = localStorage.getItem("csCur");
+        cearn[6].textContent = localStorage.getItem("ceCur");
+        localStorage.setItem("dySix", rd[5].textContent);
+        localStorage.setItem("csSix", cspnt[6].textContent);
+        localStorage.setItem("ceSix", cearn[6].textContent);
+        if (Number(cspnt[0].value) > Number(cearn[0].value)) {
+          dstk[5].className = "dstk-off";
+        } else if (Number(cspnt[0].value) <= Number(cearn[0].value)) {
+          dstk[5].className = "dstk-on";
+        }
+        curDayValue.textContent = 7;
+        nextDay = Number(tmpDay) + 6;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+6);
+      }
+    } else if (date.getDate() === Number(localStorage.getItem("commitDay"))+6) {
+      // all the codes here represent the action to be performed before the next day
+      if (date.getDate() === Number(localStorage.getItem("commitDay"))+6 && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        curDayValue.textContent = 7;
+        cspnt[0].textContent = localStorage.getItem("csCur");
+        cearn[0].textContent = localStorage.getItem("ceCur");
+        localStorage.setItem("dySeven", curDayValue.textContent);
+        nextDay = Number(tmpDay) + 7;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+7);
+      }
+    }
+    if (date.getDate() == Number(localStorage.getItem("commitDay"))+7) {
+      localStorage.clear();
+      nextDay = Number(tmpDay);
+      sCommitBtn.style.display = "flex";
+      alert("Begin a new streak");
+      for (let k=0; k<dstk.length; k++) {
+        if (dstk[k].className == "dstk-on" && dstk[k+1].className == "dstk-on" && dstk[k+2].className == "dstk-on" && dstk[k+3].className == "dstk-on" && dstk[k+4].className == "dstk-on" && dstk[k+5].className == "dstk-on") {
+          localStorage.setItem("rsCache", 1.193197484);
+          alert("You made a Day-7 streak");
+        } else if (dstk[k].className == "dstk-on" && dstk[k+1].className == "dstk-on" && dstk[k+2].className == "dstk-on") {
+          localStorage.setItem("rtCache", 1.005059518);
+          alert("You made a Day-3 streak");
+        }
+      }
+    }
+  }
+}, 1000);
+
+if (tmpDay > 0 && tmpDay !== null) {
+  // The else if statement is not used here
+  // This is because when the first day is saved on cache, then only that day would update
+  // The code should also move on to the next day also to check if it is saved to cache
+  cspnt[0].value = localStorage.getItem("csCur");
+  cearn[0].value = localStorage.getItem("ceCur");
+  if ((localStorage.getItem("dyOne") !== 0 && localStorage.getItem("dyOne") !== null)||(cspnt[1].textContent !== "" || cearn[1].textContent !== "")) {
+    rd[0].textContent = 1;
+    curDayValue.textContent = 2;
+    cspnt[1].style.color = "inherit";
+    cearn[1].style.color = "inherit";
+    cspnt[1].textContent = localStorage.getItem("csOne");
+    cearn[1].textContent = localStorage.getItem("ceOne");
+    if (Number(cspnt[1].textContent) > Number(cearn[1].textContent)) {
+      dstk[0].className = "dstk-off";
+    } else if (Number(cspnt[1].textContent) <= Number(cearn[1].textContent)) {
+      dstk[0].className = "dstk-on";
+    }
+  }
+  if ((localStorage.getItem("dyTwo") !== 0 && localStorage.getItem("dyTwo") !== null)||(cspnt[2].textContent !== "" || cearn[2].textContent !== "")) {
+    rd[1].textContent = 2;
+    curDayValue.textContent = 3;
+    cspnt[2].style.color = "inherit";
+    cearn[2].style.color = "inherit";
+    cspnt[2].textContent = localStorage.getItem("csTwo");
+    cearn[2].textContent = localStorage.getItem("ceTwo");
+    if (Number(cspnt[2].textContent) > Number(cearn[2].textContent)) {
+      dstk[1].className = "dstk-off";
+    } else if (Number(cspnt[2].textContent) <= Number(cearn[2].textContent)) {
+      dstk[1].className = "dstk-on";
+    }
+  }
+  if ((localStorage.getItem("dyThree") !== 0 && localStorage.getItem("dyThree") !== null)||(cspnt[3].textContent !== "" || cearn[3].textContent !== "")) {
+    rd[2].textContent = 3;
+    curDayValue.textContent = 4;
+    cspnt[3].style.color = "inherit";
+    cearn[3].style.color = "inherit";
+    cspnt[3].textContent = localStorage.getItem("csThree");
+    cearn[3].textContent = localStorage.getItem("ceThree");
+    if (Number(cspnt[3].textContent) > Number(cearn[3].textContent)) {
+      dstk[2].className = "dstk-off";
+    } else if (Number(cspnt[3].textContent) <= Number(cearn[3].textContent)) {
+      dstk[2].className = "dstk-on";
+    }
+  }
+  if ((localStorage.getItem("dyFour") !== 0 && localStorage.getItem("dyFour") !== null)||(cspnt[4].textContent !== "" || cearn[4].textContent !== "")) {
+    rd[3].textContent = 4;
+    curDayValue.textContent = 5;
+    cspnt[4].style.color = "inherit";
+    cearn[4].style.color = "inherit";
+    cspnt[4].textContent = localStorage.getItem("csFour");
+    cearn[4].textContent = localStorage.getItem("ceFour");
+    if (Number(cspnt[4].textContent) > Number(cearn[4].textContent)) {
+      dstk[3].className = "dstk-off";
+    } else if (Number(cspnt[4].textContent) <= Number(cearn[4].textContent)) {
+      dstk[3].className = "dstk-on";
+    }
+  }
+  if ((localStorage.getItem("dyFive") !== 0 && localStorage.getItem("dyFive") !== null)||(cspnt[5].textContent !== "" || cearn[5].textContent !== "")) {
+    rd[4].textContent = 5;
+    curDayValue.textContent = 6;
+    cspnt[5].style.color = "inherit";
+    cearn[5].style.color = "inherit";
+    cspnt[5].textContent = localStorage.getItem("csFive");
+    cearn[5].textContent = localStorage.getItem("ceFive");
+    if (Number(cspnt[5].textContent) > Number(cearn[5].textContent)) {
+      dstk[4].className = "dstk-off";
+    } else if (Number(cspnt[5].textContent) <= Number(cearn[5].textContent)) {
+      dstk[4].className = "dstk-on";
+    }
+  }
+  if ((localStorage.getItem("dySix") !== 0 && localStorage.getItem("dySix") !== null)||(cspnt[6].textContent !== "" || cearn[6].textContent !== "")) {
+    rd[5].textContent = 6;
+    curDayValue.textContent = 7;
+    cspnt[6].style.color = "inherit";
+    cearn[6].style.color = "inherit";
+    cspnt[6].textContent = localStorage.getItem("csSix");
+    cearn[6].textContent = localStorage.getItem("ceSix");
+    if (Number(cspnt[6].textContent) > Number(cearn[6].textContent)) {
+      dstk[5].className = "dstk-off";
+    } else if (Number(cspnt[6].textContent) <= Number(cearn[6].textContent)) {
+      dstk[5].className = "dstk-on";
+    }
+  }
+  if (localStorage.getItem("dySeven") !== 0 && localStorage.getItem("dySeven") !== null) {
+    curDayValue.textContent = 7;
+    cspnt[0].style.color = "inherit";
+    cearn[0].style.color = "inherit";
+  }
+}
+
+//////////////////// Change from quotes to image ////////////////////
+const showText=document.querySelector("#showText");const noText=document.querySelector("#noText");const encTextWrap=document.querySelector("#encTextWrap");const encImgWrap=document.querySelector("#encImgWrap");showText.onclick=()=>{encTextWrap.style.display="flex";showText.className="button-active";noText.className="no-text-btn";encImgWrap.style.display="none";};noText.onclick=()=>{encImgWrap.style.display="flex";noText.className="button-active";showText.className="show-text-btn";encTextWrap.style.display="none";};
+
+//////////////////// The code for the exchange ////////////////////
+const scEl=document.querySelector("#scEl");const usdEl=document.querySelector("#usdEl");const fixedAmountEl=document.querySelector("#fixedAmountEl");const colTds=document.querySelector("#ids");fixedAmountEl.value=-27000;usdEl.value=1;usdsc=1/10000;setInterval(()=>{
+if(Number(localStorage.getItem("rtCache"))==0||localStorage.getItem("rtCache")==null){var rt=1;}else{rt=Number(localStorage.getItem("rtCache"));colTds.textContent=`${Number(localStorage.getItem("rsCache"))/1.193197484} Day-7 streak and ${Number(localStorage.getItem("rtCache"))/1.005059518} Day-3 streak`;}
+if(Number(localStorage.getItem("rsCache"))==0||localStorage.getItem("rsCache")==null){var rs=1;}else{rs=Number(localStorage.getItem("rsCache"));colTds.textContent=`${Number(localStorage.getItem("rsCache"))/1.193197484} Day-7 streak and ${Number(localStorage.getItem("rtCache"))/1.005059518} Day-3 streak`;}
+var rfa=10**((4*fixedAmountEl.value)/(12*100000)),exusdsc=usdsc*rfa*rt*rs,exscusd=1/exusdsc;scEl.textContent=(exscusd*usdEl.value).toFixed(4);},100);
+
+//////////////////// Light Dark Mode ////////////////////
+const modeBtn = document.querySelector(".mode-btn");const body = document.querySelector("#body");modeBtn.textContent = localStorage.getItem("cc-mode-txt");body.className = localStorage.getItem("cc-mode");
+if(!localStorage.getItem("cc-mode-txt")) {modeBtn.textContent="LIGHT MODE";body.classList.remove("darkMode");body.classList.add("lightMode");};
+modeBtn.onclick=()=>{if(modeBtn.textContent=="LIGHT MODE"){localStorage.setItem("cc-mode-txt", "DARK MODE");modeBtn.textContent=localStorage.getItem("cc-mode-txt");body.classList.remove("lightMode");localStorage.setItem("cc-mode","darkMode");body.classList.add(localStorage.getItem("cc-mode"));}else if (modeBtn.textContent == "DARK MODE"){localStorage.setItem("cc-mode-txt", "LIGHT MODE");modeBtn.textContent=localStorage.getItem("cc-mode-txt");body.classList.remove("darkMode");localStorage.setItem("cc-mode","lightMode");body.classList.add(localStorage.getItem("cc-mode"));}};
+
+  </script>
+</body>
+</html>mpDay)+3);
+      }
+    } else if (date.getDate() === Number(localStorage.getItem("commitDay"))+3) {
+      cspnt[4].style.color = "transparent";
+      cearn[4].style.color = "transparent";
+      cspnt[4].textContent = localStorage.getItem("csCur");
+      cearn[4].textContent = localStorage.getItem("ceCur");
+      if (date.getDate() === Number(localStorage.getItem("commitDay"))+3 && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        rd[3].textContent = 4;
+        cspnt[4].style.color = "inherit";
+        cearn[4].style.color = "inherit";
+        localStorage.setItem("dyFour", rd[3].textContent);
+        localStorage.setItem("csFour", cspnt[4].textContent);
+        localStorage.setItem("ceFour", cearn[4].textContent);
+        if (Number(cspnt[0].value) > Number(cearn[0].value)) {
+          dstk[3].className = "dstk-off";
+        } else if (Number(cspnt[0].value) <= Number(cearn[0].value)) {
+          dstk[3].className = "dstk-on";
+        }
+        curDayValue.textContent = 5;
+        nextDay = Number(tmpDay) + 4;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+4);
+      }
+    } else if (date.getDate() === Number(localStorage.getItem("commitDay"))+4) {
+      cspnt[5].style.color = "transparent";
+      cearn[5].style.color = "transparent";
+      cspnt[5].textContent = localStorage.getItem("csCur");
+      cearn[5].textContent = localStorage.getItem("ceCur");
+      if (date.getDate() === Number(localStorage.getItem("commitDay"))+4 && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        rd[4].textContent = 5;
+        cspnt[5].style.color = "inherit";
+        cearn[5].style.color = "inherit";
+        localStorage.setItem("dyFive", rd[4].textContent);
+        localStorage.setItem("csFive", cspnt[5].textContent);
+        localStorage.setItem("ceFive", cearn[5].textContent);
+        if (Number(cspnt[0].value) > Number(cearn[0].value)) {
+          dstk[4].className = "dstk-off";
+        } else if (Number(cspnt[0].value) <= Number(cearn[0].value)) {
+          dstk[4].className = "dstk-on";
+        }
+        curDayValue.textContent = 6;
+        nextDay = Number(tmpDay) + 5;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+5);
+      }
+    } else if (date.getDate() === Number(localStorage.getItem("commitDay"))+5) {
+      cspnt[6].style.color = "transparent";
+      cearn[6].style.color = "transparent";
+      cspnt[6].textContent = localStorage.getItem("csCur");
+      cearn[6].textContent = localStorage.getItem("ceCur");
+      if (date.getDate() === Number(localStorage.getItem("commitDay"))+5 && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        rd[5].textContent = 6;
+        cspnt[6].style.color = "inherit";
+        cearn[6].style.color = "inherit";
+        cspnt[6].textContent = localStorage.getItem("csCur");
+        cearn[6].textContent = localStorage.getItem("ceCur");
+        localStorage.setItem("dySix", rd[5].textContent);
+        localStorage.setItem("csSix", cspnt[6].textContent);
+        localStorage.setItem("ceSix", cearn[6].textContent);
+        if (Number(cspnt[0].value) > Number(cearn[0].value)) {
+          dstk[5].className = "dstk-off";
+        } else if (Number(cspnt[0].value) <= Number(cearn[0].value)) {
+          dstk[5].className = "dstk-on";
+        }
+        curDayValue.textContent = 7;
+        nextDay = Number(tmpDay) + 6;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+6);
+      }
+    } else if (date.getDate() === Number(localStorage.getItem("commitDay"))+6) {
+      // all the codes here represent the action to be performed before the next day
+      if (date.getDate() === Number(localStorage.getItem("commitDay"))+6 && date.getHours() >= 23 && date.getMinutes() >= 59) {
+        curDayValue.textContent = 7;
+        cspnt[0].textContent = localStorage.getItem("csCur");
+        cearn[0].textContent = localStorage.getItem("ceCur");
+        localStorage.setItem("dySeven", curDayValue.textContent);
+        nextDay = Number(tmpDay) + 7;
+        localStorage.setItem("nextDayCache", Number(tmpDay)+7);
+      }
+    }
+    if (date.getDate() == Number(localStorage.getItem("commitDay"))+7) {
+      localStorage.clear();
+      nextDay = Number(tmpDay);
+      sCommitBtn.style.display = "flex";
+      alert("Begin a new streak");
+      for (let k=0; k<dstk.length; k++)  {
+        if (dstk[k].className == "dstk-on" && dstk[k+1].className == "dstk-on" && dstk[k+2].className == "dstk-on" && dstk[k+3].className == "dstk-on" && dstk[k+4].className == "dstk-on" && dstk[k+5].className == "dstk-on") {
+          localStorage.setItem("rsCache", 1.193197484);
+          alert("You made a Day-7 streak");
+        } else if (dstk[k].className == "dstk-on" && dstk[k+1].className == "dstk-on" && dstk[k+2].className == "dstk-on") {
+          localStorage.setItem("rtCache", 1.005059518);
+          alert("You made a Day-3 streak");
+        }
+      }
+    }
+  }
+}, 1000);
+
+if (tmpDay > 0 && tmpDay !== null) {
+  // The else if statement is not used here
+  // This is because when the first day is saved on cache, then only that day would update
+  // The code should also move on to the next day also to check if it is saved to cache
+  cspnt[0].value = localStorage.getItem("csCur");
+  cearn[0].value = localStorage.getItem("ceCur");
+  if ((localStorage.getItem("dyOne") !== 0 && localStorage.getItem("dyOne") !== null)||(cspnt[1].textContent !== "" || cearn[1].textContent !== "")) {
+    rd[0].textContent = 1;
+    curDayValue.textContent = 2;
+    cspnt[1].style.color = "inherit";
+    cearn[1].style.color = "inherit";
+    cspnt[1].textContent = localStorage.getItem("csOne");
+    cearn[1].textContent = localStorage.getItem("ceOne");
+    if (Number(cspnt[1].textContent) > Number(cearn[1].textContent)) {
+      dstk[0].className = "dstk-off";
+    } else if (Number(cspnt[1].textContent) <= Number(cearn[1].textContent)) {
+      dstk[0].className = "dstk-on";
+    }
+  }
+  if ((localStorage.getItem("dyTwo") !== 0 && localStorage.getItem("dyTwo") !== null)||(cspnt[2].textContent !== "" || cearn[2].textContent !== "")) {
+    rd[1].textContent = 2;
+    curDayValue.textContent = 3;
+    cspnt[2].style.color = "inherit";
+    cearn[2].style.color = "inherit";
+    cspnt[2].textContent = localStorage.getItem("csTwo");
+    cearn[2].textContent = localStorage.getItem("ceTwo");
+    if (Number(cspnt[2].textContent) > Number(cearn[2].textContent)) {
+      dstk[1].className = "dstk-off";
+    } else if (Number(cspnt[2].textContent) <= Number(cearn[2].textContent)) {
+      dstk[1].className = "dstk-on";
+    }
+  }
+  if ((localStorage.getItem("dyThree") !== 0 && localStorage.getItem("dyThree") !== null)||(cspnt[3].textContent !== "" || cearn[3].textContent !== "")) {
+    rd[2].textContent = 3;
+    curDayValue.textContent = 4;
+    cspnt[3].style.color = "inherit";
+    cearn[3].style.color = "inherit";
+    cspnt[3].textContent = localStorage.getItem("csThree");
+    cearn[3].textContent = localStorage.getItem("ceThree");
+    if (Number(cspnt[3].textContent) > Number(cearn[3].textContent)) {
+      dstk[2].className = "dstk-off";
+    } else if (Number(cspnt[3].textContent) <= Number(cearn[3].textContent)) {
+      dstk[2].className = "dstk-on";
+    }
+  }
+  if ((localStorage.getItem("dyFour") !== 0 && localStorage.getItem("dyFour") !== null)||(cspnt[4].textContent !== "" || cearn[4].textContent !== "")) {
+    rd[3].textContent = 4;
+    curDayValue.textContent = 5;
+    cspnt[4].style.color = "inherit";
+    cearn[4].style.color = "inherit";
+    cspnt[4].textContent = localStorage.getItem("csFour");
+    cearn[4].textContent = localStorage.getItem("ceFour");
+    if (Number(cspnt[4].textContent) > Number(cearn[4].textContent)) {
+      dstk[3].className = "dstk-off";
+    } else if (Number(cspnt[4].textContent) <= Number(cearn[4].textContent)) {
+      dstk[3].className = "dstk-on";
+    }
+  }
+  if ((localStorage.getItem("dyFive") !== 0 && localStorage.getItem("dyFive") !== null)||(cspnt[5].textContent !== "" || cearn[5].textContent !== "")) {
+    rd[4].textContent = 5;
+    curDayValue.textContent = 6;
+    cspnt[5].style.color = "inherit";
+    cearn[5].style.color = "inherit";
+    cspnt[5].textContent = localStorage.getItem("csFive");
+    cearn[5].textContent = localStorage.getItem("ceFive");
+    if (Number(cspnt[5].textContent) > Number(cearn[5].textContent)) {
+      dstk[4].className = "dstk-off";
+    } else if (Number(cspnt[5].textContent) <= Number(cearn[5].textContent)) {
+      dstk[4].className = "dstk-on";
+    }
+  }
+  if ((localStorage.getItem("dySix") !== 0 && localStorage.getItem("dySix") !== null)||(cspnt[6].textContent !== "" || cearn[6].textContent !== "")) {
+    rd[5].textContent = 6;
+    curDayValue.textContent = 7;
+    cspnt[6].style.color = "inherit";
+    cearn[6].style.color = "inherit";
+    cspnt[6].textContent = localStorage.getItem("csSix");
+    cearn[6].textContent = localStorage.getItem("ceSix");
+    if (Number(cspnt[6].textContent) > Number(cearn[6].textContent)) {
+      dstk[5].className = "dstk-off";
+    } else if (Number(cspnt[6].textContent) <= Number(cearn[6].textContent)) {
+      dstk[5].className = "dstk-on";
+    }
+  }
+  if (localStorage.getItem("dySeven") !== 0 && localStorage.getItem("dySeven") !== null) {
+    curDayValue.textContent = 7;
+    cspnt[0].style.color = "inherit";
+    cearn[0].style.color = "inherit";
+  }
+}
+
+//////////////////// Change from quotes to image ////////////////////
+const showText=document.querySelector("#showText");const noText=document.querySelector("#noText");const encTextWrap=document.querySelector("#encTextWrap");const encImgWrap=document.querySelector("#encImgWrap");showText.onclick=()=>{encTextWrap.style.display="flex";showText.className="button-active";noText.className="no-text-btn";encImgWrap.style.display="none";};noText.onclick=()=>{encImgWrap.style.display="flex";noText.className="button-active";showText.className="show-text-btn";encTextWrap.style.display="none";};
+
+//////////////////// The code for the exchange ////////////////////
+const scEl=document.querySelector("#scEl");const usdEl=document.querySelector("#usdEl");const fixedAmountEl=document.querySelector("#fixedAmountEl");const colTds=document.querySelector("#ids");fixedAmountEl.value=-27000;usdEl.value=1;usdsc=1/10000;setInterval(()=>{
+if(Number(localStorage.getItem("rtCache"))==0||localStorage.getItem("rtCache")==null){var rt=1;}else{rt=Number(localStorage.getItem("rtCache"));colTds.textContent=`${Number(localStorage.getItem("rsCache"))/1.193197484} Day-7 streak and ${Number(localStorage.getItem("rtCache"))/1.005059518} Day-3 streak`;}
+if(Number(localStorage.getItem("rsCache"))==0||localStorage.getItem("rsCache")==null){var rs=1;}else{rs=Number(localStorage.getItem("rsCache"));colTds.textContent=`${Number(localStorage.getItem("rsCache"))/1.193197484} Day-7 streak and ${Number(localStorage.getItem("rtCache"))/1.005059518} Day-3 streak`;}
+var rfa=10**((4*fixedAmountEl.value)/(12*100000)),exusdsc=usdsc*rfa*rt*rs,exscusd=1/exusdsc;scEl.textContent=(exscusd*usdEl.value).toFixed(4);},100);
+
+//////////////////// Light Dark Mode ////////////////////
+const modeBtn = document.querySelector(".mode-btn");const body = document.querySelector("#body");modeBtn.textContent = localStorage.getItem("cc-mode-txt");body.className = localStorage.getItem("cc-mode");
+if(!localStorage.getItem("cc-mode-txt")) {modeBtn.textContent="LIGHT MODE";body.classList.remove("darkMode");body.classList.add("lightMode");};
+modeBtn.onclick=()=>{if(modeBtn.textContent=="LIGHT MODE"){localStorage.setItem("cc-mode-txt", "DARK MODE");modeBtn.textContent=localStorage.getItem("cc-mode-txt");body.classList.remove("lightMode");localStorage.setItem("cc-mode","darkMode");body.classList.add(localStorage.getItem("cc-mode"));}else if (modeBtn.textContent == "DARK MODE"){localStorage.setItem("cc-mode-txt", "LIGHT MODE");modeBtn.textContent=localStorage.getItem("cc-mode-txt");body.classList.remove("darkMode");localStorage.setItem("cc-mode","lightMode");body.classList.add(localStorage.getItem("cc-mode"));}};
+
+  </script>
+</body>
+</html>
