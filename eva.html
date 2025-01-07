@@ -1,0 +1,172 @@
+<html>
+<head>
+ <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: grey;
+}
+/* body {
+    padding: 50%;
+} */
+div#backG {
+  height: 150px;
+  width: 350px;
+  border-radius: 10px;
+  border: 1px double white;
+  background-color: rgb(53, 51, 51);
+  display: flex;
+  flex-direction: column;
+}
+div#firstRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.heading1 {
+  font-size: 30px;
+  font-weight: 1000;
+  color: grey;
+  padding: 5px;
+}
+.heading2 {
+  color: rgb(251, 245, 245);
+}
+/* Moving on to the next row which includes the secretN, message and inputN */
+
+div.secondRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+div.secondRow>label>div {
+  margin: 5px;
+}
+.secretNumber {
+  height: 50px;
+  width: 50px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 5px 0px;
+  text-align: center;
+  color: green;
+  font-size: 30px;
+}
+.inputValue {
+  height: 50px;
+  width: 50px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 5px 0px;
+  text-align: center;
+  color: green;
+  font-size: 25px;
+}
+div.checkButton {
+  height: 50px;
+  width: 50px;
+  border: 2px solid green;
+  font-size: 30;
+  padding: 12px 4px;
+  color: green;
+  border-radius: 10px;
+}
+div.checkButton:hover {
+  animation-name: checkButtonHover;
+  animation-timing-function: ease-in;
+  animation-duration: 3s;
+}
+div#message {
+  text-align: center;
+}
+@keyframes checkButtonHover {
+    0% {
+        background-color: none;
+    }
+    50% {
+        background-color: rgb(204, 190, 190);
+        color: greenyellow;
+        border: 2px solid greenyellow;
+    }
+    100% {
+        background-color: rgb(204, 190, 190);
+        color: greenyellow;
+        border: 2px solid greenyellow;
+    }
+}
+.message {
+    width: 120px;
+}
+
+/* Eva */
+#img1{
+  height: 200px;
+  width: 500px;
+}
+ </style>
+ <title> The Biggest Cake Shop In Town </title>
+</head>
+
+<body>
+  
+<header style= "border:solid;background-color:#ffca3a;color:white;text-align:center">
+<h1>Eva's Bakery</h1>
+</header>
+<main>
+<img src="https://blob.sololearn.com/courses/np.png">
+
+<!--Business Description-->
+
+<p>Introducing our <b>latest</b> product, Baking the <b>best</b> for your satisfaction! </p>
+ <ol>
+  <li> Cupcakes</li>
+  <li> Meat Pies </li>
+ </ol>
+
+<text> And So Much More...</text>
+
+<h2 id = order> Order Now! </h2>
+
+<form>
+  <label for="c1">Flavour:</label>
+  <select name="flavour" id="c1">
+  
+   <option value="s">Strawberry</option>
+   <option value="v">Vanilla</option>
+   <option value="c">Chocolate</option>
+   <option value="r">Red Velvet</option>
+   
+  </select>
+  <label for="c2">Size:</label>
+  <select name="flavour" id="c2">
+  
+   <option value="m">6 inches</option>
+   <option value="d">8 inches</option>
+   <option value="g">10 inches</option>
+   <option value="a">12 inches</option>
+   
+  </select><br>
+  
+  <br>
+    <label for="t1">Name:</label>
+  <input type= "text" id="t1" name="na"><br>
+  <br>
+   <label for="t2">Email:</label>
+  <input type= "text" id="t2" name="em" value="e.g evabakes@gmail.com"><br>
+  <br>
+ 
+  <button onclick = "alert('Order Confirmed!')" style= "color:white;border:none;border-radius:5px;background-color:black">
+      Submit
+  </button>
+
+<p> Also check out our website <a href= "www.eva's bakery.com"><em>Eva's Bakery</em></a></p>
+</main>
+<footer>
+    Made With
+</footer>
+</body>
+</html>
