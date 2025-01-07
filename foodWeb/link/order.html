@@ -1,0 +1,309 @@
+<?php
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/order.css" />
+    <link rel="stylesheet" href="../css/utility.css" type="text/css" />
+    <link rel="stylesheet" href="../css/topnav.css" type="text/css" />
+    <link rel="icon" type="img/icon" href="../imgSvg/svg/shopware.svg" />
+    <title>Place your Orders</title>
+</head>
+
+<body id="bodyRemove">
+    <nav class="topbar">
+        <div class="topbar-col1">
+            <button type="button" class="homeItems-wrap" id="homeItems-wrap">Home<span id="home-expand-icon" class="cl-pk"> v</span>
+                <div class="homeItems" id="homeItems">
+                    <a rel="noopener" href="restaurant.html">Home</a>
+                    <a rel="noopener" href="../index.html">Reception</a>
+                </div>
+            </button>
+            <button type="button" class="menuItems-wrap" id="menuItems-wrap">Menu<span id="menu-expand-icon" class="cl-pk"> v</span>
+                <div class="menuItems" id="menuItems">
+                    <a rel="noopener" href="recipies.html">View Recipies</a>
+                    <a rel="noopener" href="order.html">Place Order</a>
+                </div>
+            </button>
+            <a rel="noopener" href="#">
+                <div>Reservations</div>
+            </a>
+        </div>
+        <div class="topbar-col2">
+            <claxx class="topbar-col2">
+                <img alt="foodWeb-logo-img"
+                    src="../imgSvg/svg/shopware.svg" class="foodWeb-logo-img" />
+                <p>FoodWeb</p>
+            </claxx>
+        </div>
+        <div class="topbar-col3">
+            <button type="button" class="blogItems-wrap" id="blogItems-wrap">Blog<span id="blog-expand-icon" class="cl-pk"> v</span>
+                <div class="blogItems" id="blogItems">
+                    <a rel="noopener" href="blog.html">Announcement</a>
+                    <a rel="noopener" href="blog.html">Hot Topics</a>
+                </div>
+            </button>
+            <button type="button" class="contactItems-wrap" id="contactItems-wrap">Contact Us<span id="contact-expand-icon" class="cl-pk"> v</span>
+                <div class="contactItems" id="contactItems">
+                    <div>
+                        <p>Email us: <span class="cl-pk">customercare@foodWeb.com</span></p>
+                        <p>Call us: <span class="cl-pk">+(234)-900-2003-000</span></p>
+                    </div>
+                    <a rel="noopener" class="aboutus-link" href="#">
+                        <div>Rate our services</div>
+                    </a>
+                    <a rel="noopener" class="aboutus-link" href="#">
+                        <div>About Us</div>
+                    </a>
+                </div>
+            </button>
+            <div title="select mode" class="modeItems-wrap" id="selectMode">Light Mode</div>
+        </div>
+    </nav>
+    <main class="main-page" id="mainPageRemove">
+        <div class="orderItems">
+            <div class="search">
+                <a rel="noopener" href="restaurant.html">
+                    <div class="return"><img alt="return-img" src="../imgSvg/svg/arrow-left.svg" class="return-img" /></div>
+                </a>
+                <div class="searchBar">
+                    <input title="search" type="search" placeholder="Search food item, ticket id etc." />
+                    <a href="viewTicket.html"><button title="search" type="button" class="searchBtn">></button></a>
+                </div>
+            </div>
+            <p class="orderItems-label">Category</p>
+            <div class="category">
+              <div class="rice-category cat-item">
+                <div class="item-object-category cat-item-link">
+                    <p class="itemObject-name">rice</p>
+                    <img alt="food category" class="itemObject-img" src="../imgSvg/img/rice.webp" />
+                </div>
+                <div class="supplement">
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Jollof rice</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/plantain.webp" />
+                    <div class="itemObject-price-wrap">1000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Fried rice</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/salad.jpg" />
+                    <div class="itemObject-price-wrap">1000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Chinesse rice</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/spaghetti.webp" />
+                    <div class="itemObject-price-wrap">4500</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Chimney rice</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap">3500</div>
+                  </div>
+                </div>
+              </div>
+              <div class="meat-category cat-item">
+                <div class="item-object-category cat-item-link">
+                    <p class="itemObject-name">meat</p>
+                    <img alt="food category" class="itemObject-img" src="../imgSvg/img/meat.jpeg" />
+                </div>
+                <div class="supplement">
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Turkey</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/plantain.webp" />
+                    <div class="itemObject-price-wrap">5000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Full chicken</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/salad.jpg" />
+                    <div class="itemObject-price-wrap">7000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Beef</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/spaghetti.webp" />
+                    <div class="itemObject-price-wrap">1000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Chicken wings</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap">2500</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Small chicken</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap">5000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Cow Leg</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap">5000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Goat meat</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap">7000</div>
+                  </div>
+                </div>
+              </div>
+              <div class="soup-category cat-item">
+                <div class="item-object-category cat-item-link">
+                    <p class="itemObject-name">soup</p>
+                    <img alt="food category" class="itemObject-img" src="../imgSvg/img/egusi.webp" />
+                </div>
+                <div class="supplement">
+                  <div class="itemObject-i food-item">
+                    <p class="itemObject-name">Egusi soup</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/plantain.webp" />
+                    <div class="itemObject-price-wrap"></div>
+                  </div>
+                  <div class="itemObject-i food-item">
+                    <p class="itemObject-name">Ogbono soup</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/salad.jpg" />
+                    <div class="itemObject-price-wrap"></div>
+                  </div>
+                  <div class="itemObject-i food-item">
+                    <p class="itemObject-name">Banga soup</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/spaghetti.webp" />
+                    <div class="itemObject-price-wrap"></div>
+                  </div>
+                  <div class="itemObject-i food-item">
+                    <p class="itemObject-name">Ewedu soup</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap"></div>
+                  </div>
+                  <div class="itemObject-i food-item">
+                    <p class="itemObject-name">Pepper soup</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap"></div>
+                  </div>
+                  <div class="itemObject-i food-item">
+                    <p class="itemObject-name">Owo soup</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swallow-category cat-item">
+                <div class="item-object-category cat-item-link">
+                    <p class="itemObject-name">swallow</p>
+                    <img alt="food category" class="itemObject-img" src="../imgSvg/img/eba.webp" />
+                </div>
+                <div class="supplement">
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Eba</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/plantain.webp" />
+                    <div class="itemObject-price-wrap">1000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Semovita</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap">1000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Fufu</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/salad.jpg" />
+                    <div class="itemObject-price-wrap">1000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Pounded yam</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/spaghetti.webp" />
+                    <div class="itemObject-price-wrap">1000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Amala</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap">1000</div>
+                  </div>
+                </div>
+              </div>
+              <div class="sauce-category cat-item">
+                <div class="item-object-category cat-item-link">
+                    <p class="itemObject-name">meat sauce</p>
+                    <img alt="food category" class="itemObject-img" src="../imgSvg/img/eba.webp" />
+                </div>
+                <div class="supplement">
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Chicken sauce</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/plantain.webp" />
+                    <div class="itemObject-price-wrap">4000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Beef sauce</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap">3000</div>
+                  </div>
+                  <div class="itemObject food-item">
+                    <p class="itemObject-name">Turkey sauce</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/salad.jpg" />
+                    <div class="itemObject-price-wrap">5000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="orderItems-label">Supplement</p>
+            <div class="supplement">
+                <div class="itemObject food-item">
+                    <p class="itemObject-name">plantain</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/plantain.webp" />
+                    <div class="itemObject-price-wrap">2000</div>
+                </div>
+                <div class="itemObject food-item">
+                    <p class="itemObject-name">salad</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/salad.jpg" />
+                    <div class="itemObject-price-wrap">2000</div>
+                </div>
+                <div class="itemObject food-item">
+                    <p class="itemObject-name">moi-moi</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/moimoi.jpg" />
+                    <div class="itemObject-price-wrap">2000</div>
+                </div>
+            </div>
+            <p class="orderItems-label">Regular Orders</p>
+            <div class="regMix">
+                <div class="itemObject food-item">
+                    <p class="itemObject-name">Special Plate</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/special.jpg" />
+                    <div class="itemObject-price-wrap">5000</div>
+                </div>
+                <div class="itemObject food-item">
+                    <p class="itemObject-name">Spaghetti meal</p>
+                    <img alt="food item" class="item-object-img" src="../imgSvg/img/spaghetti.webp" />
+                    <div class="itemObject-price-wrap">4500</div>
+                </div>
+            </div>
+        </div>
+        <div>
+        <div class="ticketSlip">
+            <div class="print-btn" id="printBtn">PAYMENT RECEIPT</div>
+            <div class="ticket-header">
+                <p class="ticket-header-title">foodweb eateries</p>
+                <p class="ticket-header-location">apple estate, festac</p>
+                <p class="ticket-header-id-wrap" id="ticketHeaderIdWrap">
+                <p>Ticket Id: <span class="ticket-header-id" id="ticketHeaderId"></span>
+                </p>
+                </p>
+            </div>
+            <div class="row-align">
+                <div>SN</div>
+                <p>Item Name</p>
+                <div>Portion</div>
+                <div>Price</div>
+            </div>
+            <div class="ticket-item"></div>
+            <div class="ticket-footer">
+                <div class="Total-amount">Total amount: <span id="totalAmount"></span>
+                    <p>Thanks for your patronage!</p>
+                </div>
+            </div>
+        </div>
+    </div></main>
+    <script src="../js/topnav.js"></script>
+    <script src="../js/order.js"></script>
+    <noscript>Javascript not enabled</noscript>
+</body>
+
+</html>

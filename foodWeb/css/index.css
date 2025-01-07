@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    color: white;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 10%;
+    background-color: orangered;
+    font-family: 'Calibri';
+    font-size: 30px;
+    .hero-page {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        .foodWeb-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .foodWeb-logo-img {
+                height: 250px;
+                width: 250px;
+                filter: invert(50%) sepia(50%) saturate(2450) hue-rotate(320deg) brightness(178%) contrast(182%);
+            }
+        }
+        .foodWeb-cards {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        a { 
+            text-decoration: none;
+        }
+        .card {
+            display: flex;
+            align-items: center;
+            border-left: 10px solid transparent;
+            height: 100px;
+            padding: 20px;
+            color: inherit;
+        }
+        .card:hover {
+            border-left-color: rgb(252, 134, 154);
+            background-color: rgba(100, 100, 100, 0.2);
+            transition: all 0.5s ease-out;
+        }
+    }
+}

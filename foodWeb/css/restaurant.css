@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Calibri";
+  .hero-page {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-image: url(../imgSvg/img/spaghetti.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgb(0,0,31);
+    /*background-repeat: repeat;*/
+    a {
+      text-decoration: none;
+    }
+    .hero-item-name {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      line-height: 60px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px;
+      gap: 20px;
+      .hin-a {
+        color: rgb(247, 65, 201);
+        font-size: 60px;
+        font-weight: bold;
+        font-family: "Calibri";
+      }
+      .hin-b {
+        color: goldenrod;
+        font-size: 70px;
+        font-weight: bold;
+        font-family: "Cochin";
+      }
+      .hin-c {
+        width: 40%;
+        line-height: 20px;
+        font-size: 10px;
+        font-family: "Segoe UI";
+        color: white;
+      }
+    }
+    .order-now {
+      height: 50px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      border: 2px solid white;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: transparent;
+      color: white;
+      text-transform: uppercase;
+    }
+    .order-now:hover {
+      transform: scale(1.2, 1.2);
+      background-color: rgba(100, 100, 100, 0.4);
+      transition: all 0.2s ease;
+    }
+  }
+  .services {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0px 200px;
+    .service {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      gap: 20px;
+      padding: 25px 20px;
+      a {
+        text-decoration: none;
+      }
+      .service-title {
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .service-description {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+        gap: 10px;
+        .service-description-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          width: 100%;
+          font-weight: bold;
+          .svg {
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+          }
+          .facebook {
+            filter: invert(25%) sepia(75%) saturate(2400%) hue-rotate(200deg)
+              brightness(80%) contrast(120%);
+          }
+          .instagram {
+            filter: invert(25%) sepia(40%) saturate(2550%) hue-rotate(340deg)
+              brightness(190%) contrast(70%);
+          }
+          .threads {
+            filter: invert(55%) sepia(40%) saturate(2550%) hue-rotate(240deg)
+              brightness(100%) contrast(70%);
+          }
+          .social-handle {
+            color: rgb(252, 170, 231);
+            font-size: 30px;
+          }
+          .facebook:hover,.instagram:hover,.threads:hover,.tiktok:hover {
+            background-color: rgba(100, 100, 100, 0.4);
+            border-radius: 7px;
+            padding: 9px;
+          }
+        }
+      }
+      .service-action-button {
+        width: fit-content;
+        place-self: center;
+        font-weight: bold;
+        font-family: segoe ui;
+        border: 5px solid blue;
+        background-color: inherit;
+        color: blue;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px 60px;
+        border-radius: 30px;
+      }
+      .service-action-button:hover {
+        background-color: blue;
+        color: white;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+  .specials {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    .specials-discover {
+      color: red;
+      font-family: "Calibri";
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .special-offers {
+      display: flex;
+      gap: 5px;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .special-offer {
+        height: 200px;
+        width: 350px;
+        border: 2px solid black;
+        border-radius: 9px;
+        color: greenyellow;
+        .special-meal-img {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          border-radius: 9px;
+          z-index: -1;
+        }
+        .meal-price-span {
+          text-decoration-line: line-through;
+        }
+      }
+      .special-offer:hover{
+        transform: scale(1.1, 1.1);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}

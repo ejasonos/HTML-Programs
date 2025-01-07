@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+:root {
+  --pink: rgb(252, 170, 231);
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  border: 2px solid black;
+  font-family: "Calibri";
+  color: white;
+  .hero-page {
+    padding: 10px 200px;
+    display: grid;
+    grid-template-columns: 100%;
+    .announcement {
+      height: 200px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 30% 70%;
+      grid-template-rows: 100%;
+      align-items: center;
+      .announcement-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: gold;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Times";
+      }
+      .announcement-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: normal;
+        font-size: 25px;
+        padding: 30px;
+        border-left: 8px solid red;
+        background-color: rgb(238, 237, 237);
+        color: black;
+        .premium {
+          color: gold;
+          font-weight: bold;
+        }
+      }
+    }
+    .hot-topic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      height: 350px;
+      width: 100%;
+      border-radius: 50px 0px;
+      background-image: linear-gradient(
+        47deg,
+        blue,
+        green,
+        orange,
+        pink,
+        purple,
+        teal,
+        burlywood,
+        red,
+        greenyellow
+      );
+      .hot-topic-title {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 35px;
+      }
+      .hot-topic-info {
+        font-size: 25px;
+      }
+    }
+  }
+}

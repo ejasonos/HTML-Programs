@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+.topbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    padding: 10px 200px;
+    background-color: orangered;
+    font-weight: bold;
+    font-family: 'Calibri';
+    font-size: 20px;
+    .topbar-col1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      color: white;
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: inherit;
+      }
+      a:hover{
+        color: rgb(252, 170, 231);
+      }
+      .homeItems-wrap {
+        background-color: transparent;
+        color: inherit;
+        font-weight: inherit;
+        border: none;
+        outline: none;
+        font-size: inherit;
+        .homeItems {
+          position: absolute;
+          display: none;
+          flex-direction: column;
+          background-color: rgba(100, 100, 100, 0.8);
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+      .menuItems-wrap {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        .menuItems {
+          position: absolute;
+          display: none;
+          flex-direction: column;
+          background-color: rgba(100, 100, 100, 0.3);
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+    }
+    .topbar-col2 {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      place-self: center;
+      text-decoration: none;
+      color: rgb(242, 160, 221);
+      font-weight: inherit;
+      font-size: inherit;
+      .foodWeb-logo-img {
+        height: 50px;
+        width: 50px;
+        filter: invert(50%) sepia(50%) saturate(2450) hue-rotate(320deg)
+          brightness(178%) contrast(182%);
+      }
+    }
+    .topbar-col3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      color: white;
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: inherit;
+      }
+      a:hover{
+        color: rgb(252, 170, 231);
+      }
+      .blogItems-wrap {
+        background-color: transparent;
+        color: inherit;
+        font-weight: inherit;
+        border: none;
+        outline: none;
+        font-size: inherit;
+        .blogItems {
+          position: absolute;
+          display: none;
+          flex-direction: column;
+          background-color: rgba(100, 100, 100, 0.3);
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+      .contactItems-wrap {
+        background-color: transparent;
+        color: inherit;
+        font-weight: inherit;
+        border: none;
+        outline: none;
+        font-size: inherit;
+        .contactItems {
+          position: absolute;
+          display: none;
+          flex-direction: column;
+          background-color: rgba(100, 100, 100, 0.3);
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+      .modeItems-wrap {
+        background-color: transparent;
+        color: inherit;
+        font-weight: inherit;
+      }
+      .modeItems-wrap:hover {
+        color: rgb(252, 170, 231);
+      }
+    }
+  }

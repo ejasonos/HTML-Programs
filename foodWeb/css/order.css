@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  .main-page {
+    display: flex;
+    .orderItems {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      gap: 20px;
+      .search {
+        width: 100%;
+        height: 50px;
+        border: 2px solid black;
+	display: grid;
+        grid-template-rows: 100%;
+        grid-template-columns: 10% 90%;
+	align-items: center;
+	.searchBar {
+	  input {
+            font-size: 20px;
+	    padding-left: 20px;
+	    width: 80%;
+	    border-radius: 50px;
+	  }
+	  .searchBtn {
+	    height: 30px;
+            width: 30px;
+            border-radius: 100%;
+	  }
+	  .searchBtn:hover {
+	    background-color: rgba(20, 20, 20, 0.2);
+	  }
+	}
+      }
+      .category-col {
+        flex-direction: column;
+      }
+      .category {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        padding: 5px;
+        gap: 5px;
+        .rice-category,.meat-category,.soup-category,.swallow-category,.sauce-category {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .supplement {
+            display: none;
+            grid-template-columns: auto auto auto auto auto;
+          }
+        }
+        .item-object-category {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 70px;
+          width: 200px;
+          border-radius: 7px;
+          .itemObject-name {
+            position: absolute;
+            background-color: rgba(35,30,33,0.7);
+            padding: 5px;
+            border-radius: inherit;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: gold;
+          }
+          .itemObject-img {
+            height: 70px;
+            width: 200px;
+            border-radius: inherit;
+          }
+        }
+        .item-object-category:hover {
+          box-shadow: 1px 1px 5px 2px gold;
+          transform: scale(1.05, 1.05);
+          transition: all 0.1s ease-in;
+        }
+      }
+      .supplement, .regMix {
+        height: fit-content;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        padding: 5px;
+        gap: 5px;
+        .food-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 200px;
+          width: 200px;
+          border-radius: 7px;
+          border: 3px solid gold;
+          .itemObject-name {
+            position: absolute;
+            background-color: rgba(35,30,33,0.7);
+            padding: 5px;
+            border-radius: inherit;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: gold;
+          }
+          .item-object-img {
+            height: 160px;
+            width: 100%;
+            border-radius: inherit;
+          }
+          .itemObject-price-wrap {
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+          }
+        }
+        .food-item:hover {
+          box-shadow: 1px 1px 5px 2px gold;
+          transform: scale(1.05, 1.05);
+          transition: all 0.1s ease-in;
+        }
+      }
+    }
+    .ticketSlip {
+      position: fixed;
+      height: fit-content;
+      width: 500px;
+      border: 1px solid black;
+      background-color: white;
+      color: black;
+      gap: 20px;
+      text-align: center;
+      .print-btn {
+        place-self: right;
+        padding: 9px 12px;
+        border-radius: 7px;
+        background-color: rgba(225, 216, 220, 0.5);
+        font-weight: bold;
+      }
+      .print-btn:hover {
+        background-color: rgb(225, 220, 230);
+        transition: all ease-in 0.3s;
+      }
+      .ticket-header {
+        height: 100px;
+        width: 100%;
+        .ticket-header-title {
+          font-size: 25px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        .ticket-header-location {
+          font-size: 12px;
+          text-transform: capitalize;
+        }
+        .ticket-header-id {
+          font-size: 16px;
+        }
+      }
+      .ticket-footer {
+	margin-top: 20px;
+      }
+    }
+  }
+}
+.return {
+  display: flex;
+  align-items: center;
+  .return-img {
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    border-radius: 100%;
+    transition: all 0.7s ease;
+  }
+  .return-img:hover {
+    background-color: rgba(100, 100, 100, 0.2);
+  }
+}
+.row-align {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 5% 55% 20% 20%;
+  width: 100%;
+  padding: 5px;
+  color: black;
+  border: 1px solid black;
+  font-size: 20px;
+  text-transform: uppercase;
+  .remove {
+    font-weight: bold;
+    font-family: 'Calibri';
+    color: gold;
+  }
+  input {
+    height: inherit;
+    text-align: center;
+  }
+}
+.print-page-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  background-color: transparent;
+}
