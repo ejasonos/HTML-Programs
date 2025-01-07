@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Calibri';
+    .main-page {
+        display: grid;
+        grid-template-columns: 17% 83%;
+        grid-template-rows: 100%;
+        .item-ind-settings {
+          background-color: orangered;
+        }
+        .hero-page {
+            border: 2px solid black;
+            .hero-page-home-row-one {
+                height: 100px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                font-size: 20px;
+                .fs-btn {
+                    background-color: transparent;
+                    color: white;
+                }
+            }
+            .recent-media {
+                display: flex;
+                gap: 20px;
+                .recent-media-box-template {
+                    height: 200px;
+                    width: 180px;
+                    border-radius: 5px;
+                    border: 1px solid grey;
+                }
+            }
+        }
+    }
+}

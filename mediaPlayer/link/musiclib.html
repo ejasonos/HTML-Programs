@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/musiclib.css" />
+    <link rel="stylesheet" type="text/css" href="../css/utility.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sidenav.css" />
+    <title>Music library</title>
+</head>
+<body>
+    <main class="main-page">
+        <nav class="sidenav">
+            <div class="sidenav-header">
+                <a rel="noopener" class="return" href="../index.html"><img alt="return-img" class="return-img"
+                        src="../resource/imgSvg/svg/arrow-left.svg" /></a>
+                <div class="sidenav-header-iconAndTitle">
+                    <div>
+                        <img alt="media-player-icon" class="media-player-icon"
+                            src="../resource/imgSvg/svg/circle-play.svg" />
+                    </div>
+                    <div>Media Player</div>
+                </div>
+            </div>
+            <div class="sidenav-search" id="sidenavSearch">
+                <input type="search" title="search" id="sidenavSearchInput" class="sidenav-search-input"
+                    placeholder="Search" />
+                <img alt="sidenav-search-click" class="sidenav-search-click"
+                    src="../resource/imgSvg/svg/magnifying-glass-arrow-right.svg" />
+            </div>
+            <div class="sidenav-list">
+              <div class="nr-splitA">
+                <div class="sidenav-listA">
+                    <a rel="noopener" class="sidenav-home sidenav-listItem" href="../index.html">
+                        <div class="item-indicator"></div>
+                        <div class="icon-wrap">
+                            <img alt="icon-home" class="icon-img icon-home" src="../resource/imgSvg/svg/house.svg" />
+                        </div>
+                        <div class="title">
+                            <p>Home</p>
+                        </div>
+                    </a>
+                    <a rel="noopener" class="sidenav-music-lib sidenav-listItem" href="../link/musiclib.html">
+                        <div class="item-indicator item-ind-musiclib"></div>
+                        <div class="icon-wrap">
+                            <img alt="icon-musiclib" class="icon-img icon-musiclib"
+                                src="../resource/imgSvg/svg/soundcloud.svg" />
+                        </div>
+                        <div class="title">
+                            <p>Music library</p>
+                        </div>
+                    </a>
+                    <a rel="noopener" class="sidenav-vid-lib sidenav-listItem" href="../link/vidlib.html">
+                        <div class="item-indicator"></div>
+                        <div class="icon-wrap">
+                            <img alt="icon-vidlib" class="icon-img icon-vidlib"
+                                src="../resource/imgSvg/svg/ruler-vertical.svg" />
+                        </div>
+                        <div class="title">
+                            <p>Video library</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidenav-listB">
+                    <a rel="noopener" class="sidenav-play-queue sidenav-listItem" href="../link/playq.html">
+                        <div class="item-indicator"></div>
+                        <div class="icon-wrap">
+                            <img alt="icon-playqueue" class="icon-img icon-playqueue"
+                                src="../resource/imgSvg/svg/list-ul.svg" />
+                        </div>
+                        <div class="title">
+                            <p>Play queue</p>
+                        </div>
+                    </a>
+                    <a rel="noopener" class="sidenav-playlists sidenav-listItem" href="../link/playlists.html">
+                        <div class="item-indicator"></div>
+                        <div class="icon-wrap">
+                            <img alt="icon-playlists" class="icon-img icon-playlists"
+                                src="../resource/imgSvg/svg/list.svg" />
+                        </div>
+                        <div class="title">
+                            <p>Playlists</p>
+                        </div>
+                    </a>
+                </div>
+              </div>
+              <div class="nr-splitB">
+                <a rel="noopener" class="sidenav-settings sidenav-listItem" href="../link/settings.html">
+                    <div class="item-indicator"></div>
+                    <div class="icon-wrap">
+                        <img alt="icon-settings" class="icon-img icon-settings" src="../resource/imgSvg/svg/gear.svg" />
+                    </div>
+                    <div class="title">
+                        <p>Settings</p>
+                    </div>
+                </a>
+              </div>
+
+            </div>
+        </nav>
+        <div class="hero-page">
+            <div class="hero-page-row-one">
+                <div class="hero-page-row-one-A"><h1>Music</h1></div>
+                <div class="hero-page-row-one-B saa">
+                  <a class="music-menuItemA music-menuItem" href="musiclib.html">
+                    <p>Songs</p>
+                    <span class="un-pad item-ind-musiclib"></span>
+                  </a>
+                  <a class="music-menuItemB music-menuItem" href="albums.html">
+                    <p>Albums</p>
+                    <span class="un-pad"></span>
+                  </a>
+                  <a class="music-menuItemC music-menuItem" href="artists.html">
+                    <p>Artists</p>
+                    <span class="un-pad"></span>
+                  </a>
+                </div>
+                <div class="hero-page-row-one-C fs"><input title="Open file(s)" type="file"  value="Open file(s)" class="fs-btn" /></div>
+            </div>
+            <div class="sub-menu-music" id="subMenu">
+              <div class="sub-menu-music-A">
+                <button title="play-btn" class="sub-menu-music-A-play-btn play-btn sort-items-btn">
+                  <img alt="Play" class="sub-menu-btn-img play-btn-img" src="../resource/imgSvg/svg/shuffle.svg" />
+                  <p class="play-btn-p">Shuffle & Play</p>
+                </button>
+              </div>
+              <div class="sub-menu-music-B">
+                <button class="sort-items-btn sib-sort-v">
+                  <p>Sort by: <span class="txt-or">A - Z v</span></p>
+                  <div class="sort-items-wrap">
+                  <span class="sort-items">
+                    <ul class="sort-ul sort-v-ul">
+                      <li><span class="item-indicator"></span><span class="sort-select">A - Z v</span></li>
+                      <li><span class="item-indicator"></span><span class="sort-select">A - Z v</span></li>
+                      <li><span class="item-indicator"></span><span class="sort-select">A - Z v</span></li>
+                      <li><span class="item-indicator"></span><span class="sort-select">A - Z v</span></li>
+                      <li><span class="item-indicator"></span><span class="sort-select">A - Z v</span></li>
+                      <li><span class="item-indicator"></span><span class="sort-select">A - Z v</span></li>
+                    </ul>
+                  </span>
+                  </div>
+                </button>
+                <button class="sort-items-btn sib-genre">
+                  <p>Genre: <span class="txt-or">All Genres v</span></p>
+                  <div class="sort-items-wrap">
+                    <span class="sort-items">
+                      <ul class="sort-ul genre-ul">
+                        <li><span class="item-indicator"></span><span class="sort-select">All Genres v</span></li>
+                        <li><span class="item-indicator"></span><span class="sort-select">All Genres v</span></li>
+                        <li><span class="item-indicator"></span><span class="sort-select">All Genres v</span></li>
+                        <li><span class="item-indicator"></span><span class="sort-select">All Genres v</span></li>
+                        <li><span class="item-indicator"></span><span class="sort-select">All Genres v</span></li>
+                      </ul>
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="song-list-menu" id="songListMenu">
+            </div>
+        </div>
+    </main>
+    <div class="footer-play"><audio controls class="footer-play-audio-default"></audio></div>
+    <script src="../js/musiclib.js"></script>
+    <script src="../js/sidenav.js"></script>
+</body>
+</html>
