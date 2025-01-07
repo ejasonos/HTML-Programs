@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    input {width: 50%;text-align: center;color: greenyellow;font-weight: bold;font-size: 18px;outline: none;background: none;padding-left: 16px;border-radius: 10px;border-width: 0px 0px 4px 0px;}#theadOne,#theadFour{position: relative;top: 1em;font-size: 17.6px;}thead tr td {display: flex;flex-direction: column;align-items: center;justify-content: center;}#bottombar {display: flex; height: 16.7%; width: 100%;}.cgpaValue {height: 100%; outline: none;}.centralize-col {display: flex;flex-direction: column;align-items: center;justify-content: center;}.centralize-row {display: flex;align-items: center;justify-content: center;}.select-page-wrap{height: 100%; width: 28%; position: relative; left: 20%;#select-page{height: 100%; width: 100%; border: 3.5px solid grey; outline: none; font-size: 16px; padding: 10px 5px; border-radius: 18px; background: green; color: white;}}
+    </style>
+    <title>CGPA Calculator</title>
+</head>
+<body>
+    <main style="width: 600px; height: 300px; border-radius: 10px; border: 2px solid green; font-family: 'Segoe UI'; background-color: rgb(1, 1, 44)">
+        <div style="display: flex; justify-content: space-around; width: 100%; height: 8.35%;">
+            <div id="time" style="width: 16.7%;  place-self: center; color: white;">TIME</div>
+            <div style="width: 33.3%; background-color: green; border-radius: 0px 0px 10px 10px; text-align: center; color: whitesmoke;">CGPA CALCULATOR</div>
+            <div id="date" style="width: 16.7%; place-self: center; color: white;">DATE</div>
+        </div>
+        <div style="margin: 1% 8%; place-content: center; height: 66.7%; width: 100%;">
+            <table style="background-color: silver; border-radius: 10px; display: flex;
+            flex-direction: row; justify-content: space-around;align-items: baseline; height: 100%; width: 83.3%; place-self: center; place-items: center;">
+                <thead id="theadOne" style="height: 100%; width: 20.8%;">
+                    <tr>
+                        <td style="text-align: center; font-size: 15px;">Level</td>
+                    </tr>
+                    <tr>
+                        <td>100 Level</td>
+                    </tr>
+                    <tr>
+                        <td>200 Level</td>
+                    </tr>
+                    <tr>
+                        <td>300 Level</td>
+                    </tr>
+                    <tr>
+                        <td>400 Level</td>
+                    </tr>
+                    <tr>
+                        <td>500 Level</td>
+                    </tr>
+                </thead>
+                <thead id="theadTwo" class="centralize-col" style="height: 100%; width: 20.8%;">
+                    <tr>
+                        <td style="text-align: center; font-size: 15px;">1ST Semester</td>
+                    </tr>
+                    <tr>
+                        <td><input placeholder=".." type="number" class="firstsem100lvl thankYouJesus" value="4.04" id="firstsem100lvl" /></td>
+                    </tr>
+                    <tr>
+                        <td><input placeholder=".." type="number" class="firstsem200lvl thankYouJesus" value="4.09" id="firstsem200lvl" /></td>
+                    </tr>
+                    <tr>
+                        <td><input placeholder=".." type="number" class="firstsem300lvl" value="" id="firstsem300lvl"></td>
+                    </tr>
+                    <tr>
+                        <td><input placeholder=".. " type="number" class="firstsem400lvl" value="" id="firstsem400lvl"/></td>
+                    </tr>
+                    <tr>
+                        <td><input placeholder=".." type="number" class="firstsem500lvl" value="" id="firstsem500lvl"/></td>
+                    </tr>
+                </thead>
+                <thead class="centralize-col" style="height: 100%; width: 20.8%;">
+                    <tr>
+                        <td style="text-align: center; font-size: 15px;">2ND Semester</td>
+                    </tr>
+                    <tr>
+                        <td><input placeholder=".." type="number" class="secondsem100lvl" value="4.16" id="secondsem100lvl" /></td>
+                    </tr>
+                    <tr>
+                        <td><input placeholder=".." type="number" class="secondsem200lvl" value="3.7" id="secondsem200lvl" /></td>
+                    </tr>
+                    <tr>
+                        <td><input placeholder=".." type="number" class="secondsem300lvl" value="" id="secondsem300lvl" /></td>
+                    </tr>
+                    <tr>
+                        <td><input placeholder=".." type="number" class="secondsem400lvl" value="" id="secondsem400lvl" /></td>
+                    </tr>
+                    <tr>
+                        <td><input placeholder=".." type="number" class="secondsem500lvl" value="" id="secondsem500lvl" /></td>
+                    </tr>
+                </thead>
+                <thead id="theadFour" style="height: 100%; width: 20.8%;">
+                    <tr>
+                        <td style="font-size: 15px; text-align: center; ">Average CGPA</td>
+                    </tr>
+                    <tr>
+                        <td><div class="cgpa100lvl">..</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="cgpa200lvl">..</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="cgpa300lvl">..</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="cgpa400lvl">..</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="cgpa500lvl">..</div></td>
+                    </tr>
+                </thead>
+    
+                </thead>
+            </table>
+        </div>
+        <div id="bottombar">
+            <div class="centralize-col cgpaValue-wrap">
+                <input id="cgpaValue" class="cgpaValue" type="number" value="" placeholder="..." />
+            </div>
+            <div class="select-page-wrap">
+                <select name="select-page" id="select-page">
+                    <option value="equal_ratio" class="equal_percentage">EQUAL RATIO</option>
+                    <option value="distinct_ratio" class="distinct_percentage">DISTINCT RATIO</option>
+                </select>
+            </div>
+        </div>
+    </main>
+    <script>
+    // declare variables
+var cgpaCalculator,
+  cgpaCalculator2,
+  cgpa100lvlCalc,
+  cgpa200lvlCalc,
+  cgpa300lvlCalc,
+  cgpa400lvlCalc,
+  cgpa500lvlCalc;
+
+// Target elements from the html doc
+var firstsem100lvl = document.querySelector(".firstsem100lvl");
+var firstsem200lvl = document.querySelector(".firstsem200lvl");
+var firstsem300lvl = document.querySelector(".firstsem300lvl");
+var firstsem400lvl = document.querySelector(".firstsem400lvl");
+var firstsem500lvl = document.querySelector(".firstsem500lvl");
+var secondsem100lvl = document.querySelector(".secondsem100lvl");
+var secondsem200lvl = document.querySelector(".secondsem200lvl");
+var secondsem300lvl = document.querySelector(".secondsem300lvl");
+var secondsem400lvl = document.querySelector(".secondsem400lvl");
+var secondsem500lvl = document.querySelector(".secondsem500lvl");
+var cgpa100lvl = document.querySelector(".cgpa100lvl");
+var cgpa200lvl = document.querySelector(".cgpa200lvl");
+var cgpa300lvl = document.querySelector(".cgpa300lvl");
+var cgpa400lvl = document.querySelector(".cgpa400lvl");
+var cgpa500lvl = document.querySelector(".cgpa500lvl");
+const finalcgpa = document.querySelector("#cgpaValue");
+const selectPage = document.querySelector("#select-page");
+
+// function to calculate the cgpa value from the scores entered
+function packageSelect() {
+  var package = this.options[this.selectedIndex].value;
+  switch (package) {
+    case "equal_ratio":
+      let cgpaCalculator2 =
+        0.2 *
+          ((Number(firstsem100lvl.value) + Number(secondsem100lvl.value)) / 2) +
+        0.2 *
+          ((Number(firstsem200lvl.value) + Number(secondsem200lvl.value)) / 2) +
+        0.2 *
+          ((Number(firstsem300lvl.value) + Number(secondsem300lvl.value)) / 2) +
+        0.2 *
+          ((Number(firstsem400lvl.value) + Number(secondsem400lvl.value)) / 2) +
+        0.2 *
+          ((Number(firstsem500lvl.value) + Number(secondsem500lvl.value)) / 2);
+      cgpa100lvlCalc =
+        (Number(firstsem100lvl.value) + Number(secondsem100lvl.value)) / 2;
+      cgpa200lvlCalc =
+        (Number(firstsem200lvl.value) + Number(secondsem200lvl.value)) / 2;
+      cgpa300lvlCalc =
+        (Number(firstsem300lvl.value) + Number(secondsem300lvl.value)) / 2;
+      cgpa400lvlCalc =
+        (Number(firstsem400lvl.value) + Number(secondsem400lvl.value)) / 2;
+      cgpa500lvlCalc =
+        (Number(firstsem500lvl.value) + Number(secondsem500lvl.value)) / 2;
+
+      cgpa100lvl.textContent = cgpa100lvlCalc.toFixed(2);
+      cgpa200lvl.textContent = cgpa200lvlCalc.toFixed(2);
+      cgpa300lvl.textContent = cgpa300lvlCalc.toFixed(2);
+      cgpa400lvl.textContent = cgpa400lvlCalc.toFixed(2);
+      cgpa500lvl.textContent = cgpa500lvlCalc.toFixed(2);
+      finalcgpa.value = cgpaCalculator2.toFixed(4);
+
+      if (finalcgpa.value < 0 || finalcgpa.value > 5) {
+        finalcgpa.value = "Grading (5.0 GPA)";
+      }
+
+      if (cgpaCalculator2 >= 0 && cgpaCalculator2 < 1.5) {
+        finalcgpa.style.backgroundColor = "brown";
+      } else if (cgpaCalculator2 >= 1.5 && cgpaCalculator2 < 2.5) {
+        finalcgpa.style.backgroundColor = "brown";
+      } else if (cgpaCalculator2 >= 2.5 && cgpaCalculator2 < 3.5) {
+        finalcgpa.style.backgroundColor = "orangered";
+      } else if (cgpaCalculator2 >= 3.5 && cgpaCalculator2 < 4.5) {
+        finalcgpa.style.backgroundColor = "yellow";
+      } else if (cgpaCalculator2 >= 4.5 && cgpaCalculator2 <= 5.0) {
+        finalcgpa.style.backgroundColor = "rgba(20, 256, 20, 1)";
+      } else {
+        console.log("Grading (5.0 GPA)");
+      }
+      break;
+    case "distinct_ratio":
+      let cgpaCalculator =
+        0.1 *
+          ((Number(firstsem100lvl.value) + Number(secondsem100lvl.value)) / 2) +
+        0.15 *
+          ((Number(firstsem200lvl.value) + Number(secondsem200lvl.value)) / 2) +
+        0.2 *
+          ((Number(firstsem300lvl.value) + Number(secondsem300lvl.value)) / 2) +
+        0.25 *
+          ((Number(firstsem400lvl.value) + Number(secondsem400lvl.value)) / 2) +
+        0.3 *
+          ((Number(firstsem500lvl.value) + Number(secondsem500lvl.value)) / 2);
+      cgpa100lvlCalc =
+        (Number(firstsem100lvl.value) + Number(secondsem100lvl.value)) / 2;
+      cgpa200lvlCalc =
+        (Number(firstsem200lvl.value) + Number(secondsem200lvl.value)) / 2;
+      cgpa300lvlCalc =
+        (Number(firstsem300lvl.value) + Number(secondsem300lvl.value)) / 2;
+      cgpa400lvlCalc =
+        (Number(firstsem400lvl.value) + Number(secondsem400lvl.value)) / 2;
+      cgpa500lvlCalc =
+        (Number(firstsem500lvl.value) + Number(secondsem500lvl.value)) / 2;
+
+      cgpa100lvl.textContent = cgpa100lvlCalc.toFixed(2);
+      cgpa200lvl.textContent = cgpa200lvlCalc.toFixed(2);
+      cgpa300lvl.textContent = cgpa300lvlCalc.toFixed(2);
+      cgpa400lvl.textContent = cgpa400lvlCalc.toFixed(2);
+      cgpa500lvl.textContent = cgpa500lvlCalc.toFixed(2);
+      finalcgpa.value = cgpaCalculator.toFixed(4);
+
+      if (finalcgpa.value < 0 || finalcgpa.value > 5) {
+        finalcgpa.value = "Grading (5.0 GPA)";
+      }
+
+      if (cgpaCalculator >= 0 && cgpaCalculator < 1.5) {
+        finalcgpa.style.backgroundColor = "brown";
+      } else if (cgpaCalculator >= 1.5 && cgpaCalculator < 2.5) {
+        finalcgpa.style.backgroundColor = "brown";
+      } else if (cgpaCalculator >= 2.5 && cgpaCalculator < 3.5) {
+        finalcgpa.style.backgroundColor = "orangered";
+      } else if (cgpaCalculator >= 3.5 && cgpaCalculator < 4.5) {
+        finalcgpa.style.backgroundColor = "yellow";
+      } else if (cgpaCalculator >= 4.5 && cgpaCalculator <= 5.0) {
+        finalcgpa.style.backgroundColor = "rgba(20, 256, 20, 1)";
+      } else {
+        console.log("Grading (5.0 GPA)");
+      }
+      break;
+    default:
+      alert("Something wrong");
+  }
+}
+selectPage.addEventListener("change", packageSelect, false);
+
+// for the time and date
+const timeDiv = document.querySelector("#time");
+const dateDiv = document.querySelector("#date");
+setInterval(function () {
+  var time = new Date();
+  var hr = time.getHours();
+  var min = time.getMinutes();
+  var sec = time.getSeconds();
+
+  const [dd, mm, ccyy] = [time.getDate(), time.getUTCMonth()+1, time.getFullYear()];
+  
+  dateDiv.textContent = `${dd}/${mm}/${ccyy}`;
+  timeDiv.textContent = `${hr}:${min}:${sec}`;
+}, 1000);
+
+    </script>
+</body>
+</html>
